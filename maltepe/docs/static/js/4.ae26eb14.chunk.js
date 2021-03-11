@@ -1,0 +1,2 @@
+(this.webpackJsonpmaltepe=this.webpackJsonpmaltepe||[]).push([[4],{10:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return r}));n(0);var c=n(12),i=n(1);function r(){return Object(i.jsx)("div",{className:"App",children:Object(i.jsx)(c.a,{children:"Site Sakini"})})}},12:function(e,t,n){"use strict";n(0);var c=n(1);t.a=function(e){var t=e.children;return Object(c.jsx)("h1",{children:t})}}}]);
+//# sourceMappingURL=4.ae26eb14.chunk.js.map

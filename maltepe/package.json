@@ -1,0 +1,47 @@
+{
+  "name": "maltepe",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "source-map-explorer": "^2.5.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'docs/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "corporate:dev": "set REACT_APP_NAME=corporate&& cross-env PORT=3000 react-scripts start",
+    "corporate:build": "set REACT_APP_NAME=corporate&& react-scripts build && mv build docs || move build docs",
+    "website:dev": "set REACT_APP_NAME=website&& cross-env PORT=3001 react-scripts start",
+    "website:build": "set REACT_APP_NAME=website&& react-scripts build && mv build docs || move build docs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
