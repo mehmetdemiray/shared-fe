@@ -2,26 +2,34 @@
   "name": "maltepe",
   "version": "0.1.0",
   "private": true,
+  "config": {
+    "port": 8080
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.14.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-loadable": "^5.5.0",
     "react-scripts": "4.0.3",
     "source-map-explorer": "^2.5.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'docs/static/js/*.js'",
+    "echo": "npm config set port 80 && npm config get port",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "corporate:dev": "set REACT_APP_NAME=corporate&& cross-env PORT=3000 react-scripts start",
-    "corporate:build": "set REACT_APP_NAME=corporate&& react-scripts build && mv build docs || move build docs",
-    "website:dev": "set REACT_APP_NAME=website&& cross-env PORT=3001 react-scripts start",
-    "website:build": "set REACT_APP_NAME=website&& react-scripts build && mv build docs || move build docs"
+    "corp": "npm run clear && npm run paste --%npm_config_project%",
+    "corporate": "set REACT_APP_NAME=corporate&& cross-env PORT=3000 react-scripts start",
+    "corporate:build": "set REACT_APP_NAME=corporate&&set BUILD_PATH=build/corporate&&react-scripts build",
+    "corporate:analyze": "source-map-explorer 'build/corporate/static/js/*.js'",
+    "website": "set REACT_APP_NAME=website&& cross-env PORT=3001 react-scripts start",
+    "website:build": "set REACT_APP_NAME=website&&set BUILD_PATH=build/website&&react-scripts build",
+    "website:analyze": "source-map-explorer 'build/website/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "node-sass": "^5.0.0"
   }
 }

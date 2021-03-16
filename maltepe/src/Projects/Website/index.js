@@ -1,10 +1,13 @@
 import React from 'react';
-import TextComp from 'Components/Text';
+import 'antd/dist/antd.css';
+import { TextComp } from '@Shared/Components';
 
-export default function AppWebsite() {
+function AppWebsite() {
   return (
     <div className="App">
       <TextComp>Site Sakini</TextComp>
     </div>
   )
 }
+
+export default AppWebsite;
